@@ -3,7 +3,7 @@ import torch
 from torch import Tensor
 
 
-def gumbel_sigmoid(logits: Tensor, tau: float = 1, hard: bool = False, threshold: int = 0.5) -> Tensor:
+def gumbel_sigmoid(logits: Tensor, tau: float = 1, hard: bool = False, threshold: float = 0.5) -> Tensor:
     """
     Samples from the Gumbel-Sigmoid distribution and optionally discretizes.
     The discretization converts the values greater than `threshold` to 1 and the rest to 0.
